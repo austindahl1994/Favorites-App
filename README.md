@@ -1,4 +1,4 @@
-A favorites app that stores user login information, bcrypt for password hashing and JWT (JSON web tokens for secure authentication)
+A full stack MERN favorites app made to learn Industry standard practices for test driven development and latests security trends.
 
 1. Add JWT - https://www.youtube.com/watch?v=mbsmsi7l3r4&list=WL&index=3&t=483s
 2. Add Bcrypt - https://www.youtube.com/watch?v=AzA_LTDoFqY
@@ -17,40 +17,4 @@ Detailed pages for information - Home, Favorites, Profile, Settings, Notificatio
 3. Can add, read, update, and delete information
 4. Allow users to add about me information?
 
-SQL
-
-1. Left join and right join
-   Info:
-   Tables:
-
-Tables are the fundamental structure in an RDBMS. They store data in rows and columns.
-Indexes:
-
-Indexes improve the speed of data retrieval operations on a database table. They are created on one or more columns of a table.
-Primary Key:
-
-A primary key is a unique identifier for a record in a table. It ensures that each row in a table is uniquely identified.
-Foreign Key:
-
-A foreign key is a field in a database table that is a primary key in another table. It establishes a link between the two tables, enforcing referential integrity.
-Normalization:
-
-Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity.
-Transactions:
-
-A transaction is a sequence of one or more SQL statements executed as a single unit of work. It ensures data consistency and integrity.
-Views:
-
-A view is a virtual table based on the result of a SELECT query. It allows you to present data in a way that differs from the actual structure of the tables.
-Stored Procedures:
-
-Stored procedures are precompiled sets of one or more SQL statements that can be executed as a single unit. They are stored and can be reused.
-Triggers:
-
-Triggers are sets of instructions that are automatically executed (or "triggered") in response to certain events, such as changes to data.
-Constraints:
-
-Constraints define rules that restrict the values in a database to maintain data integrity. Examples include UNIQUE, NOT NULL, and CHECK constraints.
-ACID Properties:
-
-ACID (Atomicity, Consistency, Isolation, Durability) is a set of properties that guarantee reliable processing of database transactions.
+SQL - left and right join
