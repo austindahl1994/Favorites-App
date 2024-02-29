@@ -1,0 +1,15 @@
+GET http://localhost:5000
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username": "Austin"
+}
+
+###
+
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQXVzdGluIiwiaWF0IjoxNzA1MzYxMDgyfQ.ZvnETFNKcT5Tutf3xjj7N2K6mlJwDsH2RJxOWcUmfoY
