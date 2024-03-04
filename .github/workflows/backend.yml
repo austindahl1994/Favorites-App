@@ -13,6 +13,7 @@ jobs:
         with:
           node-version: "18.x"
       - name: Install Dependencies
+        working-directory: ./Backend-Favorites-App
         run: npm install
         # run: npm ci - is better than npm install?
       # - run: npm run build --if-present
