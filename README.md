@@ -1,5 +1,6 @@
 A full stack MERN favorites app made to learn Industry standard practices for test driven development and latests security trends.
 
+(Professional tools to add/learn/develop using, not in any particular order)
 1. Add JWT - https://www.youtube.com/watch?v=mbsmsi7l3r4&list=WL&index=3&t=483s
 2. Add Bcrypt - https://www.youtube.com/watch?v=AzA_LTDoFqY
 3. React Router - https://www.youtube.com/watch?v=Ul3y1LXxzdU&t=1079s
@@ -9,6 +10,7 @@ A full stack MERN favorites app made to learn Industry standard practices for te
 7. SSL verified with letsEncrypt and Certbot - https://letsencrypt.org/getting-started/ & https://certbot.eff.org/instructions?ws=webproduct&os=windows
 8. Use and setup Apache - https://httpd.apache.org/
 9. Babel
+10. Add GraphQL Schemas and Mutations
 
 Detailed pages for information - Home, Favorites, Profile, Settings, Notifications, Search
 
