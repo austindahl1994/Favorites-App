@@ -10,6 +10,7 @@ export const login = (req, res) => {
   res.json({ accessToken: accessToken});
 };
 
+
 export const register = (req, res) => {
   // Registration logic here
 };
