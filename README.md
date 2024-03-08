@@ -9,7 +9,8 @@
 7. SSL verified with letsEncrypt and Certbot - <https://letsencrypt.org/getting-started//> & <https://certbot.eff.org/instructions?ws=webproduct&os=windows/>
 8. Use and setup Apache? - <https://httpd.apache.org//>
 9. Babel
-10. Docker
+10. Add GraphQL Schemas and Mutations
+11. Docker
 
 Detailed pages for information - Home, Favorites, Profile, Settings, Notifications, Search
 
