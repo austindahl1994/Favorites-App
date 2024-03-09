@@ -10,20 +10,28 @@ jobs:
     steps:
       - name: Checkout # access repo code
         uses: actions/checkout@v4
+
       - name: Create env file
         run: |
           touch .env
           echo MONGO_URI = ${{ secrets.MDB }} >> .env
+
       - name: Use Node.js # Ensures Node and npm installed in actions
         uses: actions/setup-node@v4
         with:
           node-version: "18.x"
           # cache: "npm"
+
       - name: Install Dependencies
         working-directory: ./Backend-Favorites-App
         run: npm ci
+
       - name: Run Tests
-        working-directory: ./Backend-Favorites-App
-        run: npm test
         env:
           MONGO_URI: ${{ secrets.MDB }}
+        working-directory: ./Backend-Favorites-App
+        run: npm test
+
+      - name: Cleanup files
+        if: always()
+        run: rm -f .env
