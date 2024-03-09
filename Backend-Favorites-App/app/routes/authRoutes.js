@@ -1,9 +1,10 @@
-//user authentication: login, registration, token refresh
-import express from 'express';
-import { login } from '../controllers/authController.js';
+//user authentication: login, registration, token refresh, reset password
+import express from "express";
+import { login } from "../controllers/authController.js";
+import { register } from "../controllers/authController.js";
 
 const router = express.Router();
 
-router.post('/login', login);
-
+router.post("/login", login);
+router.post("/register", register);
 export default router;

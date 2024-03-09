@@ -11,6 +11,7 @@
 9. Babel
 10. Add GraphQL Schemas and Mutations
 11. Docker
+12. When tests are done, start working with separate branches
 
 Detailed pages for information - Home, Favorites, Profile, Settings, Notifications, Search
 
@@ -41,5 +42,6 @@ Google Doc - <https://docs.google.com/document/d/11r7INqlzgqz1mUoat6MiAixqqrYh40
 **Leaving off on:**
 
 1. Change mongodb to use mongoose schemas
-2. Add mongoose schemas etc. - <https://mongoosejs.com/docs/guide.html/>, <https://www.mongodb.com/developer/languages/javascript/mongoose-versus-nodejs-driver//>, <https://www.mongodb.com/docs/manual/crud//>
+2. Add mongoose schemas etc. - <https://mongoosejs.com/docs/guide.html/>, <https://www.mongodb.com/developer/languages/javascript/mongoose-versus-nodejs-driver//>, <https://www.mongodb.com/docs/manual/crud//> more info - <https://mongoosejs.com/docs/api/document.html/>
 3. Fix JWT to work properly, works with frontend
+4. bcrypt for logging in/registering <https://www.npmjs.com/package/bcrypt/>
