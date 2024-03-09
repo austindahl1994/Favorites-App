@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Testing
+    # environment: Testing
 
     steps:
       - name: Checkout # access repo code
@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Tests
         env:
-          MONGO_URI: ${{ secrets.MDB }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
         working-directory: ./Backend-Favorites-App
         run: npm test
 
