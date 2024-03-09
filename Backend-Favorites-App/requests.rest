@@ -26,3 +26,6 @@ Content-Type: application/json
 {
   "token": "refresh token"
 }
+
+###
+GET http://localhost:5000/dbtest

@@ -25,16 +25,21 @@ SQL - left and right join
 
 1. Faster coding with VS code tips and tricks -
 <https://code.visualstudio.com/docs/getstarted/tips-and-tricks/>
-2. Add Caching for yaml file - <https://github.com/actions/setup-node#caching-global-packages-data/>
-3. GitLens/GitKraken? - <https://www.gitkraken.com/blog/gitlens-vs-code-extension-guide/>
-4. MongoDB Server up - <https://www.mongodb.com/docs/mongodb-vscode/install//>
-5. Finish setting up JWT properly, integrate with front end - <https://jwt.io/introduction/>
-6. Setting up Auth server and Resource server
-7. Additional Jest Tests
-8. Start using Git for version control, different branches
+2. GitLens/GitKraken? - <https://www.gitkraken.com/blog/gitlens-vs-code-extension-guide/>
+3. MongoDB Server up - <https://www.mongodb.com/docs/mongodb-vscode/install//>
+4. Finish setting up JWT properly, integrate with front end - <https://jwt.io/introduction/>
+5. Setting up Auth server and Resource server
+6. Additional Jest Tests
+7. Start using Git for version control, different branches
 
 **Optional:**
 
 1. Auth0
 
 Google Doc - <https://docs.google.com/document/d/11r7INqlzgqz1mUoat6MiAixqqrYh40tjM6LIzNLodGM/edit/>
+
+**Leaving off on:**
+
+1. Change mongodb to use mongoose schemas
+2. Add mongoose schemas etc. - <https://mongoosejs.com/docs/guide.html/>, <https://www.mongodb.com/developer/languages/javascript/mongoose-versus-nodejs-driver//>, <https://www.mongodb.com/docs/manual/crud//>
+3. Fix JWT to work properly, works with frontend

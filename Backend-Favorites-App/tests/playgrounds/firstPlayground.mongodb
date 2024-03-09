@@ -1,0 +1,10 @@
+db.getCollection('users').insertOne({
+  fullname: "John Doe",
+  username: "Johnnyboy22"
+});
+
+const user = db.getCollection('users').findOne(
+  { username: "Johnnyboy22" }
+);
+
+console.log(user);

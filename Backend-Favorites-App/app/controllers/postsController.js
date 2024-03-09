@@ -1,5 +1,5 @@
 //This is just a test for db later
-import { generateAccessToken } from "../middleware/authMiddleware";
+import { generateAccessToken } from "../middleware/authMiddleware.js";
 const posts = [
   { username: "Austin", title: "post 1" },
   { username: "Tyler", title: "post 2" }
