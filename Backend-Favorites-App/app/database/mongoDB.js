@@ -1,6 +1,10 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGO_URI;
+if (!uri) {
+  console.error("MONGO_URI env value is null or not set");
+  process.exit(1);
+}
 const client = new MongoClient(uri);
 
 const connect = async () => {
