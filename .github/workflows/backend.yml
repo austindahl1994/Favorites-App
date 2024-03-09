@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
-    # environment: Testing
+    environment: Testing
 
     steps:
       - name: Checkout # access repo code
@@ -14,13 +14,13 @@ jobs:
       - name: Create env file
         run: |
           touch .env
-          echo MONGO_URI = ${{ secrets.MONGO_URI }} >> .env
+          echo MONGO_URI = ${{ secrets.MDB }} >> .env
 
       - name: Use Node.js # Ensures Node and npm installed in actions
         uses: actions/setup-node@v4
         with:
           node-version: "18.x"
-          # cache: "npm"
+          cache: "npm"
 
       - name: Install Dependencies
         working-directory: ./Backend-Favorites-App
@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Tests
         env:
-          MONGO_URI: ${{ secrets.MONGO_URI }}
+          MONGO_URI: ${{ secrets.MDB }}
         working-directory: ./Backend-Favorites-App
         run: npm test
 
