@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: "18.x"
           cache: "npm"
-          cache-dependency-path: /Backend-Favorites-App/package-lock.json
+          cache-dependency-path: Backend-Favorites-App/package-lock.json
 
       - name: Install Dependencies
         working-directory: ./Backend-Favorites-App
