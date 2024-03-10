@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
+
 const saltRounds = process.env.SALT_VALUE;
 const userSchema = new mongoose.Schema({
   username: {
