@@ -1,17 +1,19 @@
-import dotenv from "dotenv";
-import mongoose, { Mongoose } from "mongoose";
+import { MongoMemoryServer } from "mongodb-memory-server";
+import mongoose from "mongoose";
 import { User } from "../../app/models/userModel.js";
-dotenv.config();
 
-const testDB = process.env.MONGO_URI + "TestDB";
+let mongoServer;
 
 beforeAll(async () => {
-  await mongoose.connect(testDB);
+  mongoServer = await MongoMemoryServer.create();
+  const mongoUri = mongoServer.getUri();
+  await mongoose.connect(mongoUri);
 });
 
 afterAll(async () => {
   await mongoose.connection.dropDatabase();
   await mongoose.connection.close();
+  await mongoServer.stop();
 });
 
 describe("User Model Test", () => {
