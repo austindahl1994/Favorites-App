@@ -3,9 +3,8 @@ import mongoose, { Mongoose } from "mongoose";
 import { User } from "../../app/models/userModel.js";
 dotenv.config();
 
-const testDB = process.env.MONGO_URI + "TestDB";
-
 beforeAll(async () => {
+  const testDB = process.env.MONGO_URI + "TestDB";
   await mongoose.connect(testDB);
 });
 
