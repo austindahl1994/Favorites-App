@@ -41,7 +41,8 @@ Google Doc - <https://docs.google.com/document/d/11r7INqlzgqz1mUoat6MiAixqqrYh40
 
 **Leaving off on:**
 
-1. Change mongodb to use mongoose schemas
-2. Add mongoose schemas etc. - <https://mongoosejs.com/docs/guide.html/>, <https://www.mongodb.com/developer/languages/javascript/mongoose-versus-nodejs-driver//>, <https://www.mongodb.com/docs/manual/crud//> more info - <https://mongoosejs.com/docs/api/document.html/>
-3. Fix JWT to work properly, works with frontend
-4. bcrypt for logging in/registering <https://www.npmjs.com/package/bcrypt/>
+1. Add mongoose schemas etc. - <https://mongoosejs.com/docs/guide.html/>, <https://www.mongodb.com/docs/manual/crud//>
+2. Fix JWT to work properly, works with passed info from frontend
+3. bcrypt for logging in/registering <https://www.npmjs.com/package/bcrypt/>
+
+Notes: Added ability to test mongodb using a memoryserver library, add more tests, get bcrypt to work for password hashing, then get jwt working with refresh tokens and credentials from front end
