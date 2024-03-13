@@ -23,7 +23,7 @@ afterAll(async () => {
 });
 
 describe("User Model Test", () => {
-  test("create and save user successfully", async () => {
+  test("create and save user successfully without fn", async () => {
     const createdUser = new User(userData);
     const savedUser = await createdUser.save();
 
@@ -41,7 +41,7 @@ describe("User Model Test", () => {
 });
 
 describe("User Creation Service Test", () => {
-  test("Use createUser function properly", async () => {
+  test("Use createUser function properly using createUser fn", async () => {
     await createUser(userData);
 
     const createdUser = await User.findOne({ username: "johnnyboy" });
