@@ -11,11 +11,6 @@ jobs:
       - name: Checkout # access repo code
         uses: actions/checkout@v4
 
-      # - name: Create env file
-      #   run: |
-      #     touch .env
-      #     echo MONGO_URI = ${{ secrets.MDB }} >> .env
-
       - name: Use Node.js # Ensures Node and npm installed in actions
         uses: actions/setup-node@v4
         with:
@@ -30,9 +25,8 @@ jobs:
       - name: Run Tests
         env:
           MONGO_URI: ${{ secrets.MDB }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ATS }}
+          REFRESH_TOKEN_SECRET: ${{ secrets.RTS }}
+          PORT: ${{ secrets.PORT }}
         working-directory: ./Backend-Favorites-App
         run: npm test
-
-      # - name: Cleanup files
-      #   if: always()
-      #   run: rm -f .env
