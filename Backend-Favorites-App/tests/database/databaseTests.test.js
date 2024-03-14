@@ -2,18 +2,17 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import { User } from "../../app/models/userModel.js";
 import { createUser } from "../../app/services/userService.js";
+import { userData } from "../utils/mockData.js";
 let mongoServer;
-
-const userData = {
-  username: "johnnyboy",
-  email: "jb@gmail.com",
-  password: "noneyabusiness",
-};
 
 beforeAll(async () => {
   mongoServer = await MongoMemoryServer.create();
   const mongoUri = mongoServer.getUri();
-  await mongoose.connect(mongoUri);
+  await mongoose.connect(mongoUri, {
+    autoIndex: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 });
 
 afterAll(async () => {
@@ -22,8 +21,8 @@ afterAll(async () => {
   await mongoServer.stop();
 });
 
-describe("User Model Test", () => {
-  test("create and save user successfully without fn", async () => {
+describe("MongoDB Connect", () => {
+  test("Create and save user successfully using model", async () => {
     const createdUser = new User(userData);
     const savedUser = await createdUser.save();
 
