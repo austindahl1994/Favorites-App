@@ -45,4 +45,4 @@ Google Doc - <https://docs.google.com/document/d/11r7INqlzgqz1mUoat6MiAixqqrYh40
 2. Fix JWT to work properly, works with passed info from frontend
 3. bcrypt for logging in/registering <https://www.npmjs.com/package/bcrypt/>
 
-Notes: Added ability to test mongodb using a memoryserver library, add more tests, get bcrypt to work for password hashing, then get jwt working with refresh tokens and credentials from front end
+Notes: Added some more tests, continue to due so to finish all functions being tested, update jsdoc.json to properly create document, followed by commenting all code for project.
