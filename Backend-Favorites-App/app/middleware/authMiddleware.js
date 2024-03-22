@@ -1,10 +1,11 @@
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 dotenv.config();
 
 export const authenticateToken = (req, res, next) => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+  const authHeader = req.headers["authorization"];
+  if (!authHeader) return res.sendStatus(401);
+  const token = authHeader && authHeader.split(" ")[1];
   if (token == null) return res.sendStatus(401);
 
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
@@ -15,9 +16,21 @@ export const authenticateToken = (req, res, next) => {
 };
 
 export const generateAccessToken = (user) => {
-  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '10s'})
-}
+  try {
+    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+      expiresIn: "10s",
+    });
+  } catch (error) {
+    return error;
+  }
+};
 
 export const generateRefreshToken = (user) => {
-  return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET)
-}
+  try {
+    return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, {
+      expiresIn: "30s",
+    });
+  } catch (error) {
+    return error;
+  }
+};
