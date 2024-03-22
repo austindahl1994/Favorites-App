@@ -10,7 +10,6 @@ export const res = {
 export const req = {
   body: userData,
   headers: {
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQXVzdGluIiwiaWF0IjoxNzA1MzYxMDgyfQ.ZvnETFNKcT5Tutf3xjj7N2K6mlJwDsH2RJxOWcUmfoY",
+    Authorization: "Bearer testToken",
   },
 };
