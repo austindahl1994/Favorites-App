@@ -5,7 +5,7 @@
 First, clone the repository to your local machine:
 
 ```bash
-git clone <https://github.com/austindahl1994/Favorites-App.git/>
+git clone https://github.com/austindahl1994/Favorites-App.git
 ```
 
 ### Backend setup
